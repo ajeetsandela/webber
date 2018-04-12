@@ -1,0 +1,416 @@
+
+<style>
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: url(/images/bow2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 150px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 140px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 130px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+</style>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">("ALEKTA")</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#services" class="w3-bar-item w3-button"> Services</a>
+      <a href="#tech" class="w3-bar-item w3-button">Our Technologies </a>
+      <a href="#contact" class="w3-bar-item w3-button"> Contact Us</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">Services</a>
+  <a href="#tech" onclick="w3_close()" class="w3-bar-item w3-button">Our Technologies</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+  </div>
+</div>
+<!-- Header with full-height image -->
+
+<div class="bgimg-1 w3-display-container w3-grayscale-min " id="home">
+  <div class="title">
+  </div>
+  <div class="waveWrapper waveAnimation">
+    <div class="waveWrapperInner bgTop">
+
+      <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    </div>
+    <div class="waveWrapperInner bgMiddle">
+
+      <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    </div>
+
+    <div class="waveWrapperInner bgBottom">
+      <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    </div>
+
+  </div>
+
+
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</div >
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center" style="font-family: cursive;  font-size:44pt; font-style:Bold">ABOUT US</h3>
+  <div id="about" class="container-fluid">
+ <div class="row">
+    <div class="col-sm-8" >
+      <h4 style="font-family:times, serif; font-size:24pt; font-style:Bold; letter-spacing: 2px">
+ Alekta Sol.Limited is an Indian Information Technology Services corporation headquartered in Hyderabad, India. In 2018, alekta sol. demerged its non-IT businesses into separate companies to bring in more focus on independent businesses
+      </h4>
+      <br>
+    </div>
+    <div class="col-sm-1">
+             <img src="/images/bottom.jpg" alt="Company logo" width="400" height="300">
+
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+    <p class="w3-center w3-large">Key features of our company</p>
+
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+
+   <div class="w3-quarter">
+        <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">Responsive</p>
+        <p>Responsive web design (RWD)  we just belive in this for the look and feel of the websites and pages </p>
+      </div>
+
+  <div class="w3-quarter">
+        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Passion</p>
+        <p>Our Passion towards the work gives the  energy that keeps us growing ahead </p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Design</p>
+        <p>Design is not just what it looks like and feels like. Design is how it works</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Support</p>
+        <p> We supoort all the softwares which are in the present world </p>
+      </div>
+  </div>
+  </div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey">
+  <div id="services" class="services text-center"> <div style="padding-bottom: 100px">
+    <h3 class="w3-center" style="font-family: Calisto MT;  font-size:44pt; font-style:Bold">Services</h3>
+</div>
+  <div class="w3-row-padding">
+    <!-- Container (Services Section) -->
+
+<br>
+<h4>What we offer</h4>
+<br>
+<div class="row slideanim">
+  <div class="col-sm-4">
+    <i class="fa fa-power-off w3-margin-bottom w3-jumbo" ></i>
+
+    <h4>Easy Customization</h4>
+    <p>Turnoff your Worries</p>
+  </div>
+  <div class="col-sm-4">
+    <i class="fa fa-heart w3-margin-bottom w3-jumbo" ></i>
+
+    <h4>Responsive Design</h4>
+    <p>Begins your taste</p>
+  </div>
+  <div class="col-sm-4">
+    <i class="fa fa-clock-o w3-margin-bottom w3-jumbo" ></i>
+
+        <h4>In Time Work</h4>
+    <p>All the time</p>
+  </div>
+</div>
+<br><br>
+<div class="row slideanim">
+  <div class="col-sm-4">
+    <i class="fa fa-leaf w3-margin-bottom w3-jumbo" ></i>
+
+    <h4>User Friendly Applications</h4>
+    <p>Love to Use</p>
+  </div>
+  <div class="col-sm-4">
+    <i class="fa fa-certificate w3-margin-bottom w3-jumbo" ></i>
+
+    <h4>Realtime Experience</h4>
+    <p>Connect with work</p>
+  </div>
+  <div class="col-sm-4">
+    <i class="fa fa-user w3-margin-bottom w3-jumbo" ></i>
+
+    <h4 style="color:#2F4F4F;">Team WORK</h4>
+    <p>Hungry to Learn</p>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div class="w3-container w3-light-grey" id="tech">
+  <div id="tech" class="tech text-center"> <div style="padding-bottom: 100px">
+    <h3 class="w3-center" style="font-family:Calisto MT; font-size:5pt; font-style: Bold">Our Technologies</h3>
+  <div class="w3-row-padding">
+    <!-- Container (Services Section) -->
+
+<br>
+
+<br
+<br>
+<br>
+<br>
+<div class="row slideanim">
+  <div class="col-sm-4">
+    <img src="/images/chatbot.png"height="250" width="400" >
+
+
+  </div>
+  <div class="col-sm-4">
+<img src="/images/blockchain.png" height="250" width="250" >
+
+  </div>
+  <div class="col-sm-4">
+<img src="/images/salesfore.png"  height="375" width="375" >
+
+  </div>
+</div>
+<br><br>
+<div class="row slideanim">
+  <div class="col-sm-4">
+<img src="/images/android.png" height="250" width="250">
+
+  </div>
+  <div class="col-sm-4">
+<img src="/images/ios.png" >
+
+  </div>
+  <div class="col-sm-4">
+<img src="/images/webdesign.png" height="300" width="300" >
+
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 style="font-size:50px">Our Skills.</h3>
+      <p>Developing skills is as important as training.<br>
+       A larger effort is needed to create a skilled workforce with employment potential.</p>
+      <p>And we Believe in it.<br>
+      </p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide">Management Skills</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:92%">92%</div>
+      </div>
+      <p class="w3-wide">Professional Skills</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Marketing skills</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:93%">93%</div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center"  style="font-family:Calisto MT; font-size:44pt; font-style:Bold">Contact Us</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Hyderabad,India</p><br>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (602)516-5112</p><br>
+
+
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: admin@alektasolutions.com</p><br>
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <br>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+<br>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+<br>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <br>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    </div>
+    <div class="w3-half">
+      <h4 class="text-center" style="font-style:Bold">where we work <h4>
+
+      <!-- Add Google Maps -->
+      <div id="googleMap" style="width:100%;height:510px;"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Alekta Solutions@2018</p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(	17.43600, 78.40192);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOfmMzQ1ZaCt9eIrlzANJhKr4WrJMw40g&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
